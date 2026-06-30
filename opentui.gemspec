@@ -11,5 +11,6 @@ Gem::Specification.new do |spec|
   spec.files    = Dir['lib/**/*.rb']
 
   spec.executable = 'opentui'
+  spec.add_dependency 'ffi', '~> 1.17'
   spec.required_ruby_version = '>= 3.0'
 end
