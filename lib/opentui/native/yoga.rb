@@ -1,5 +1,7 @@
 require 'opentui/native/yoga/config'
 require 'opentui/native/yoga/node'
+require 'opentui/native/yoga/node_layout'
+require 'opentui/native/yoga/node_style'
 
 module OpenTUI
   module Native
