@@ -9,8 +9,8 @@ module OpenTUI
 
       def self.getUrl(link_id, max_len = 512)
         buf = FFI::MemoryPointer.new(:uint8, max_len)
-        actual_len = Native.linkGetUrl(link_id, buf, max_len)
-        buf.get_bytes(0, actual_len)
+        bytesize = Native.linkGetUrl(link_id, buf, max_len)
+        buf.get_bytes(0, bytesize)
       end
 
       module Attributes
