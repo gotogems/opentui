@@ -1,4 +1,3 @@
-require 'opentui/native/structs'
 require 'opentui/native/yoga/config'
 require 'opentui/native/yoga/node'
 require 'opentui/native/yoga/node_layout'
