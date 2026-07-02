@@ -27,11 +27,11 @@ module OpenTUI
         end
 
         def self.setValue(node, kind, edge_or_gutter, unit, value)
-          Native.yogaNodeStyleSetValue(node, kind, edgeOrGutter, unit, value)
+          Native.yogaNodeStyleSetValue(node, kind, edge_or_gutter, unit, value)
         end
 
         def self.getValue(node, kind, edge_or_gutter) # bigint?
-          Native.yogaNodeStyleGetValue(node, kind, edgeOrGutter)
+          Native.yogaNodeStyleGetValue(node, kind, edge_or_gutter)
         end
       end
     end

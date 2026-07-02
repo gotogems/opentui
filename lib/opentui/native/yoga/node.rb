@@ -77,18 +77,10 @@ module OpenTUI
           Native.yogaNodeCalculateLayout(node, width, height, direction)
         end
 
-        def self.getComputedLayout(node) # -> NativeYogaLayout
+        def self.getComputedLayout(node)
           layout = FFI::MemoryPointer.new(:float, 6)
-          Native.yogaNodeGetComputedLayout(node, layout) # ptr
-
-          {
-            :left   => layout[0],
-            :top    => layout[1],
-            :right  => layout[2],
-            :bottom => layout[3],
-            :width  => layout[4],
-            :height => layout[5],
-          }
+          Native.yogaNodeGetComputedLayout(node, layout)
+          YogaLayout.new(layout)
         end
 
         def self.isReferenceBaseline(node)
